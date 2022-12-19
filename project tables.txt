@@ -1,6 +1,6 @@
 create database CourseMonitoringSystem;
 
----------Admin
+--Admin
 
 create table Admin(
 username varchar(25) primary key UNIQUE,
@@ -10,13 +10,13 @@ password varchar(18)
 ALTER TABLE faculty AUTO_INCREMENT=1001;
 
 
-****inserting****
+**inserting
 insert into Admin values ("admin","admin@123");
 
 
 
 
----------Faculty--------------
+--Faculty
 
 create table Faculty(
 facultyid int primary key AUTO_INCREMENT,
@@ -29,14 +29,14 @@ password varchar(20)
 );
 
 
-****inserting****
+**inserting
 
 insert into faculty(facultyname,facultyaddress,mobile,email,username,password)
  values("Ratan","java", 8888888888, "ratan@123", "ratan@123","12345");
 
 
 
--------Course---------
+--Course
 
 create table Course(
 courseId int primary key AUTO_INCREMENT,
@@ -45,7 +45,7 @@ fee long,
 courseDescription varchar(50)
 );
 
--------Batch--------
+**Batch
 
 create table Batch(
 batchId int primary key AUTO_INCREMENT,
@@ -61,7 +61,7 @@ duration int
 
 
 
--------Course Plan----------
+**Course Plan
 
 create table CoursePlan(
 planId int primary key AUTO_INCREMENT,
@@ -72,6 +72,3 @@ topic varchar(25),
 status varchar(25)
 );
 
-
-alter table course
-change column coursid courseId int;
