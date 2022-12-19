@@ -1,0 +1,77 @@
+create database CourseMonitoringSystem;
+
+---------Admin
+
+create table Admin(
+username varchar(25) primary key UNIQUE,
+password varchar(18)
+);
+
+ALTER TABLE faculty AUTO_INCREMENT=1001;
+
+
+****inserting****
+insert into Admin values ("admin","admin@123");
+
+
+
+
+---------Faculty--------------
+
+create table Faculty(
+facultyid int primary key AUTO_INCREMENT,
+facultyname varchar(25),
+facultyaddress varchar(25),
+mobile long,
+email varchar(25) UNIQUE,
+username varchar(25) UNIQUE,
+password varchar(20)
+);
+
+
+****inserting****
+
+insert into faculty(facultyname,facultyaddress,mobile,email,username,password)
+ values("Ratan","java", 8888888888, "ratan@123", "ratan@123","12345");
+
+
+
+-------Course---------
+
+create table Course(
+courseId int primary key AUTO_INCREMENT,
+courseName varchar(25),
+fee long,
+courseDescription varchar(50)
+);
+
+-------Batch--------
+
+create table Batch(
+batchId int primary key AUTO_INCREMENT,
+courseId int,
+FOREIGN KEY(courseId) references Course(courseid),
+facultyId int,
+FOREIGN KEY(facultyId) references Faculty(facultyid),
+numberofStudents long,
+batchstartDate DATE,
+duration int
+);
+
+
+
+
+-------Course Plan----------
+
+create table CoursePlan(
+planId int primary key AUTO_INCREMENT,
+batchId int,
+FOREIGN KEY(batchId) references Batch(batchId),
+daynumber int,
+topic varchar(25),
+status varchar(25)
+);
+
+
+alter table course
+change column coursid courseId int;
