@@ -94,6 +94,6 @@ So the Automated Course Monitoring System will keep the records of all the cours
 <br>
 •	status: completed/pending
 
-<h1>entity-relationship (e-r) diagram</h1>
+<h1>entity-relationship (e-r) Diagram</h1>
 <img src="https://github.com/nagesh2609/insidious-spot-1655/blob/main/CMS%20Establish%20Relation%20Using%20tables.png?raw=true" alt="">
 
